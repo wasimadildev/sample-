@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#home">Portfolio</a>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Hello, I'm <span class="highlight">Your Name</span></h1>
+                <h2>Web Developer & Designer</h2>
+                <p>Creating beautiful, functional websites is my passion.</p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn primary-btn">View My Work</a>
+                    <a href="#contact" class="btn secondary-btn">Contact Me</a>
+                </div>
+                <div class="social-links">
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Me</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-img">
+                    <img src="img/project1.jpeg" alt="Profile Picture">
+                </div>
+                <div class="about-text">
+                    <h3>Who am I?</h3>
+                    <p>I'm a passionate web developer with a strong focus on creating responsive, user-friendly websites. With expertise in frontend and backend technologies, I strive to deliver high-quality digital experiences that meet client needs and exceed expectations.</p>
+                    <p>I believe in clean code, intuitive design, and the power of the web to transform businesses and connect people.</p>
+                    
+                    <div class="skills">
+                        <h3>My Skills</h3>
+                        <div class="skill">
+                            <div class="skill-name">HTML/CSS</div>
+                            <div class="skill-bar">
+                                <div class="skill-per" data-per="90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">JavaScript</div>
+                            <div class="skill-bar">
+                                <div class="skill-per" data-per="85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">React</div>
+                            <div class="skill-bar">
+                                <div class="skill-per" data-per="80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">UI/UX Design</div>
+                            <div class="skill-bar">
+                                <div class="skill-per" data-per="75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="assets/resume.pdf" download class="btn primary-btn">Download Resume <i class="fas fa-download"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>My Projects</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="app">App</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+            </div>
+            <div class="project-gallery">
+                <div class="project-item" data-category="web">
+                    <div class="project-img">
+                        <img src="img/project02.avif" alt="Project 1">
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h3>E-commerce Website</h3>
+                                <p>A fully responsive e-commerce platform with shopping cart functionality.</p>
+                                <div class="project-links">
+                                    <a href="#" aria-label="View Live"><i class="fas fa-eye"></i></a>
+                                    <a href="#" aria-label="View Code"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-item" data-category="app">
+                    <div class="project-img">
+                        <img src="img/project3.jpg" alt="Project 2">
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h3>Task Manager App</h3>
+                                <p>A productivity app built with React and Node.js.</p>
+                                <div class="project-links">
+                                    <a href="#" aria-label="View Live"><i class="fas fa-eye"></i></a>
+                                    <a href="#" aria-label="View Code"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-item" data-category="design">
+                    <div class="project-img">
+                        <img src="img/project.jpg" alt="Project 3">
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h3>Brand Redesign</h3>
+                                <p>Complete brand identity redesign for a local business.</p>
+                                <div class="project-links">
+                                    <a href="#" aria-label="View Live"><i class="fas fa-eye"></i></a>
+                                    <a href="#" aria-label="View Code"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-item" data-category="web">
+                    <div class="project-img">
+                        <img src="img/project4.jpg" alt="Project 4">
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h3>Portfolio Website</h3>
+                                <p>A minimalist portfolio website with smooth animations.</p>
+                                <div class="project-links">
+                                    <a href="#" aria-label="View Live"><i class="fas fa-eye"></i></a>
+                                    <a href="#" aria-label="View Code"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-item" data-category="app">
+                    <div class="project-img">
+                        <img src="img/project5.jpg" alt="Project 5">
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h3>Weather Dashboard</h3>
+                                <p>Real-time weather app with interactive data visualization.</p>
+                                <div class="project-links">
+                                    <a href="#" aria-label="View Live"><i class="fas fa-eye"></i></a>
+                                    <a href="#" aria-label="View Code"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-item" data-category="design">
+                    <div class="project-img">
+                        <img src="img/project6.jpg" alt="Project 6">
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h3>UI/UX Concept</h3>
+                                <p>Modern user interface design for a mobile banking app.</p>
+                                <div class="project-links">
+                                    <a href="#" aria-label="View Live"><i class="fas fa-eye"></i></a>
+                                    <a href="#" aria-label="View Code"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>My Services</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="services-container">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Custom website development using modern technologies to create responsive, fast, and user-friendly websites.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>UI/UX Design</h3>
+                    <p>Creating intuitive, engaging user experiences with clean and modern interface designs.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Responsive Design</h3>
+                    <p>Building websites that work flawlessly across all devices - desktop, tablet, and mobile.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>SEO Optimization</h3>
+                    <p>Improving website visibility in search engines to drive more organic traffic.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Web Maintenance</h3>
+                    <p>Regular updates, security checks, and performance optimization to keep your website running smoothly.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>API Integration</h3>
+                    <p>Connecting your website with third-party services through API integration for enhanced functionality.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What People Say</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="testimonial-slider">
+                <div class="testimonial-container">
+                    <div class="testimonial-item active">
+                        <div class="testimonial-content">
+                            <div class="quote">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p>"Working with this talented developer was an absolute pleasure. They delivered our e-commerce website ahead of schedule and with exceptional quality. Highly recommended!"</p>
+                            <div class="testimonial-author">
+                                <div class="author-img">
+                                    <img src="img/testimonial1.jpg" alt="Client 1">
+                                </div>
+                                <div class="author-info">
+                                    <h4>Sarah Johnson</h4>
+                                    <p>CEO, TechStart</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="testimonial-content">
+                            <div class="quote">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p>"The attention to detail and creative problem-solving skills made all the difference in our project. The responsive design works flawlessly across all devices!"</p>
+                            <div class="testimonial-author">
+                                <div class="author-img">
+                                    <img src="img/testimonial2.jpg" alt="Client 2">
+                                </div>
+                                <div class="author-info">
+                                    <h4>Michael Rodriguez</h4>
+                                    <p>Marketing Director, BrandGrow</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="testimonial-content">
+                            <div class="quote">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p>"I appreciated the clear communication throughout the project. The UI/UX design exceeded our expectations and has received numerous compliments from our customers."</p>
+                            <div class="testimonial-author">
+                                <div class="author-img">
+                                    <img src="img/testimonial3.jpg" alt="Client 3">
+                                </div>
+                                <div class="author-info">
+                                    <h4>Emily Zhang</h4>
+                                    <p>Product Manager, InnovateTech</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-controls">
+                    <button class="prev-btn" aria-label="Previous testimonial"><i class="fas fa-chevron-left"></i></button>
+                    <div class="testimonial-dots">
+                        <span class="dot active" data-index="0"></span>
+                        <span class="dot" data-index="1"></span>
+                        <span class="dot" data-index="2"></span>
+                    </div>
+                    <button class="next-btn" aria-label="Next testimonial"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog">
+        <div class="container">
+            <div class="section-header">
+                <h2>Latest Articles</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="blog-container">
+                <div class="blog-card">
+                    <div class="blog-img">
+                        <img src="img/blog1.jpg" alt="Blog Post 1">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-date">
+                            <span>12 Jan 2023</span>
+                        </div>
+                        <h3>Modern Web Design Trends for 2023</h3>
+                        <p>Explore the cutting-edge design trends that are shaping the web development landscape this year.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-img">
+                        <img src="img/blog2.jpg" alt="Blog Post 2">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-date">
+                            <span>25 Feb 2023</span>
+                        </div>
+                        <h3>Optimizing Website Performance</h3>
+                        <p>Learn essential techniques to improve your website's loading speed and overall performance.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-img">
+                        <img src="img/blog3.jpg" alt="Blog Post 3">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-date">
+                            <span>18 Mar 2023</span>
+                        </div>
+                        <h3>The Future of Frontend Development</h3>
+                        <p>A deep dive into upcoming technologies and methodologies that will shape frontend development.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-cta">
+                <a href="#" class="btn secondary-btn">View All Articles</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Email</h3>
+                            <p>contact@example.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Phone</h3>
+                            <p>+1 (123) 456-7890</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Location</h3>
+                            <p>New York, NY, USA</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn primary-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2023 My Portfolio. All Rights Reserved.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <a href="#" class="scroll-top-btn" aria-label="Scroll to Top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="js/script.js"></script>
+</body>
+</html> 
