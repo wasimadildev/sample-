@@ -46,17 +46,34 @@ window.addEventListener('scroll', () => {
 });
 
 // ===== Mobile Menu Toggle =====
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navLinks.classList.toggle('active');
-});
+if (hamburger) {
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('active');
+        document.body.classList.toggle('menu-open'); // Prevent body scrolling when menu is open
+    });
+}
 
 // Close mobile menu when clicking a nav link
-navLinksItems.forEach(item => {
-    item.addEventListener('click', () => {
+if (navLinksItems) {
+    navLinksItems.forEach(item => {
+        item.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+            document.body.classList.remove('menu-open');
+        });
+    });
+}
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (navLinks.classList.contains('active') && 
+        !e.target.closest('.nav-links') && 
+        !e.target.closest('.hamburger')) {
         hamburger.classList.remove('active');
         navLinks.classList.remove('active');
-    });
+        document.body.classList.remove('menu-open');
+    }
 });
 
 // ===== Theme Toggler =====

@@ -239,9 +239,13 @@ header.scrolled .logo img {
     color: var(--text-color);
 }
 
+/* Mobile menu */
 .hamburger {
     display: none;
     cursor: pointer;
+    z-index: 101;
+    padding: 10px;
+    margin-right: -10px;
 }
 
 .bar {
@@ -251,6 +255,12 @@ header.scrolled .logo img {
     margin: 5px auto;
     background-color: var(--text-color);
     transition: var(--transition);
+    border-radius: 3px;
+}
+
+/* Prevent scrolling when menu is open */
+body.menu-open {
+    overflow: hidden;
 }
 
 /* ===== Hero Section ===== */
@@ -1001,35 +1011,45 @@ footer .social-links a {
         padding: 0 15px;
     }
     
+    .hamburger {
+        display: block;
+    }
+    
     .nav-links {
         position: fixed;
-        top: 80px;
+        top: 0;
         left: -100%;
         width: 100%;
-        height: calc(100vh - 80px);
+        height: 100vh;
         background-color: var(--bg-color);
         display: flex;
         justify-content: center;
         align-items: center;
-        transition: var(--transition);
-        z-index: 99;
+        transition: left 0.3s ease;
+        z-index: 100;
     }
     
     .nav-links.active {
         left: 0;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     }
     
     .nav-links ul {
         flex-direction: column;
         align-items: center;
+        width: 100%;
     }
     
     .nav-links li {
-        margin: 15px 0;
+        margin: 20px 0;
+        width: 100%;
+        text-align: center;
     }
     
-    .hamburger {
+    .nav-links a {
+        font-size: 1.4rem;
         display: block;
+        padding: 10px;
     }
     
     .hamburger.active .bar:nth-child(1) {
@@ -1042,6 +1062,12 @@ footer .social-links a {
     
     .hamburger.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
+    }
+    
+    .theme-toggle {
+        position: absolute;
+        top: 30px;
+        right: 70px;
     }
     
     .hero-content h1 {
@@ -1144,6 +1170,20 @@ footer .social-links a {
     .logo a {
         font-size: 1.3rem;
     }
+    
+    .nav-links a {
+        font-size: 1.2rem;
+    }
+    
+    .theme-toggle {
+        right: 60px;
+        top: 28px;
+        font-size: 1.1rem;
+    }
+    
+    .hamburger {
+        margin-right: -5px;
+    }
 }
 
 /* ===== Animation on Scroll ===== */
@@ -1176,4 +1216,12 @@ footer .social-links a {
 
 .dark-mode .logo img {
     box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode .nav-links {
+    /* background-color: var(--dark-bg); */
+}
+
+.dark-mode .hamburger .bar {
+    background-color: var(--light-text);
 } 
